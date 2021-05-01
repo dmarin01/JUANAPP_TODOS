@@ -1,0 +1,25 @@
+@import url(../../Bootcamp_Neoland/_css/reset.css);
+
+/* Meter ROOT */
+
+
+header{
+    background-color: #eee;
+    height: 10em;
+}
+
+nav {
+    background-color: black;
+    height: 4em;
+}
+
+footer {
+    background-color: black;
+}
+
+footer p {
+    color:whitesmoke;
+    padding: 1em;
+   
+}
+
