@@ -33,7 +33,8 @@ class ListadeTareas {
 
         switch (this.prioridad) {
             case '0':
-                alert('Debe seleccionar una prioridad')
+                alert('Selecciona una prioridad');
+                //RESOLVER TEMA BOTON SIN ACCION
                 break;
             case '1':
                 div.style.backgroundColor = 'red'
