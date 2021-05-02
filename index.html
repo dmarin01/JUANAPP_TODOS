@@ -24,15 +24,16 @@
             <div class="container">
                 <form class="d-flex" action="">
 
-                    <input type="text" id="guardar" placeholder="Introduce una tarea a guardar">
+                    <input class="form-control ms-2" type="text" id="guardar"
+                        placeholder="Introduce una tarea a guardar">
 
-                    <select id="prioridad-tarea">
+                    <select id="prioridad-tarea" class="p-1 ms-2 form-select">
                         <option selected value="0" selected>Seleccione una prioridad</option>
                         <option value="1">URGENTE</option>
-                        <option value="2">Diaria</option>
-                        <option value="3">Mensual</option>
+                        <option value="2">Mensual</option>
+                        <option value="3">Diaria</option>
                     </select>
-                    <input class="btn btn-outline-success" id="btn-guardar" type="submit" value="Anadir">
+                    <input class="btn btn-outline-success ms-2" id="btn-guardar" type="submit" value="Añadir">
                 </form>
 
             </div>
@@ -40,16 +41,16 @@
 
         <nav>
             <div class="container div-nav d-flex">
-                <input type="text" class="form-control me-2" id="search" placeholder="Introduce una tarea a buscar">
+
                 <form action="">
-                    <select id="prioridad-tarea-nav" class="form-select" aria-label="Default select example">
-                        <option value="" selected>Seleccione una prioridad</option>
+                    <select id="prioridad-tarea-nav" class="form-select mt-2" aria-label="Default select example">
+                        <option class="form-control" value="" selected>Seleccione una prioridad</option>
                         <option value="1">URGENTE</option>
-                        <option value="2">Diaria</option>
-                        <option value="3">Mensual</option>
+                        <option value="2">Mensual</option>
+                        <option value="3">Diaria</option>
                     </select>
                 </form>
-
+                <input type="text" class="form-control m-2" id="search" placeholder="Introduce una tarea a buscar">
 
 
             </div>
@@ -57,7 +58,7 @@
 
         <main>
             <div class="main-tareas">
-                <!--        <div>
+                <!--    <div class="d-flex justify-content-between">
                     <p>Aprender JavaScript</p>
                     <button type="button" class="btn-close ms"></button>
                 </div> -->
@@ -65,9 +66,10 @@
 
             </div>
         </main>
-        <footer>
-            <p>TODO's JUANAN APP</p>
-
+        <footer class="container">
+            <div>
+                <p>TODO's JUANAN APP</p>
+            </div>
         </footer>
 
 

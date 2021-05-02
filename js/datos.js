@@ -21,8 +21,7 @@ class ListadeTareas {
         let div = document.createElement('div');
         let parrf = document.createElement('p');
         let btnRemove = document.createElement('button');
-        div.classList.add(this.prioridad)
-
+        div.classList.add(this.prioridad);
 
         let parrfText = document.createTextNode(this.titulo);
         parrf.appendChild(parrfText);
@@ -33,13 +32,16 @@ class ListadeTareas {
 
         switch (this.prioridad) {
             case '1':
-                div.style.backgroundColor = 'red'
+                div.style.backgroundColor = '#FF6961'
+                div.className = this.prioridad + ' d-flex justify-content-between';
                 break;
             case '2':
-                div.style.backgroundColor = 'lightgreen'
+                div.style.backgroundColor = '#CFADC7'
+                div.className = this.prioridad + ' d-flex justify-content-between';
                 break;
             case '3':
-                div.style.backgroundColor = 'lightblue'
+                div.style.backgroundColor = '#5d9b9b'
+                div.className = this.prioridad + ' d-flex justify-content-between';
                 break;
         }
 
