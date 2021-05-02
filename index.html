@@ -22,7 +22,7 @@
     <div class="wrapper container">
         <header>
             <div class="container">
-                <form action="">
+                <form class="d-flex" action="">
 
                     <input type="text" id="guardar" placeholder="Introduce una tarea a guardar">
 
@@ -32,16 +32,17 @@
                         <option value="2">Diaria</option>
                         <option value="3">Mensual</option>
                     </select>
-                    <input id="btn-guardar" type="submit" value="Anadir">
+                    <input class="btn btn-outline-success" id="btn-guardar" type="submit" value="Anadir">
                 </form>
 
             </div>
         </header>
 
         <nav>
-            <div class="container div-nav">
+            <div class="container div-nav d-flex">
+                <input type="text" class="form-control me-2" id="search" placeholder="Introduce una tarea a buscar">
                 <form action="">
-                    <select id="prioridad-tarea-nav">
+                    <select id="prioridad-tarea-nav" class="form-select" aria-label="Default select example">
                         <option value="" selected>Seleccione una prioridad</option>
                         <option value="1">URGENTE</option>
                         <option value="2">Diaria</option>
@@ -49,7 +50,7 @@
                     </select>
                 </form>
 
-                <input type="text" id="search" placeholder="Introduce una tarea a buscar">
+
 
             </div>
         </nav>
