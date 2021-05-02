@@ -37,29 +37,47 @@ function pintarAllTareas(pLista) {
 //FILTRAR POR PRIORIDAD
 function listaFiltradaPrioridades(pPrioridad) {
 
-    const listaDePrioridades = listaDeElementos.filter(prioridadBuscada => prioridadBuscada.value === pPrioridad)
+
+    const listaDePrioridades = listaDeElementos.filter(prioridadBuscada => prioridadBuscada.prioridad === pPrioridad)
 
     return listaDePrioridades;
 }
 
 
 function seleccionTarea(event) {
+    event.preventDefault();
 
     let seleccionPrioridad = event.target.value;
 
-    let listaTareasPrioridad = listaDeElementos.prioridad
-
-
-
-    if (seleccionPrioridad != '') {
-
-        const prioridadTarea = listaFiltradaPrioridades.seleccionPrioridad;
-        pintarAllTareas(prioridadTarea);
-    } else {
-        pintarAllTareas(listaDeElementos)
-    }
 
     console.log(seleccionPrioridad);
+
+
+    switch (seleccionPrioridad) {
+        case '1':
+            divPintar.innerHTML = pintarAllTareas.seleccionPrioridad
+
+            break;
+        case '2':
+            console.log('hola que');
+            break;
+        case '3':
+            console.log('hola tal');
+            break;
+    }
+
+
+    /*   if (seleccionPrioridad != "") {
+          const filtradoPrioridad = listaFiltradaPrioridades.seleccionPrioridad;
+  
+          pintarAllTareas(filtradoPrioridad);
+      } else {
+          pintarAllTareas(listaDeElementos.seleccionPrioridad);
+      } */
+
+    return seleccionPrioridad
+
+
 }
 
 
