@@ -17,6 +17,7 @@ class ListadeTareas {
     }
 
     pintarTarea(divPintar) {
+
         let div = document.createElement('div');
         let parrf = document.createElement('p');
         let btnRemove = document.createElement('button');
@@ -30,11 +31,7 @@ class ListadeTareas {
         div.appendChild(parrf);
         div.appendChild(btnRemove);
 
-
         switch (this.prioridad) {
-            case '0':
-                alert('Debe seleccionar una prioridad')
-                break;
             case '1':
                 div.style.backgroundColor = 'red'
                 break;
@@ -51,8 +48,8 @@ class ListadeTareas {
         btnRemove.addEventListener('click', (event) => {
 
             this.completarTarea();
-            div.parentNode.removeChild(div)
-            listaDeElementos.splice(event.target, 1)
+            div.parentNode.removeChild(div);
+            listaDeElementos.splice(event.target, 1);
         })
 
     }
