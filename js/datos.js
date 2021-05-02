@@ -16,31 +16,39 @@ class ListadeTareas {
         this.completado = true;
     }
 
-    pintarTarea() {
+    pintarTarea(divPintar) {
         let div = document.createElement('div');
         let parrf = document.createElement('p');
         let btnRemove = document.createElement('button');
-        button.classList.add("btn-close ms");
 
-        parrfText = document.createTextNode(this.titulo);
+
+        let parrfText = document.createTextNode(this.titulo);
         parrf.appendChild(parrfText);
+        btnRemove.classList.add("btn-close");
 
         div.appendChild(parrf);
         div.appendChild(btnRemove);
 
         switch (this.prioridad) {
             case 'urgente':
-                div.style.background = 'red'
+                console.log(this.prioridad);
+                div.style.backgroundColor = 'red'
                 break;
             case 'diaria':
-                div.style.background = 'lightgreen'
+                div.style.backgroundColor = 'lightgreen'
                 break;
             case 'mensual':
-                div.style.background = 'ligthblue'
+                div.style.backgroundColor = 'ligthblue'
                 break;
         }
 
+        divPintar.appendChild(div);
 
+        btnRemove.addEventListener('click', () => {
+
+            this.completarTarea();
+            div.parentNode.removeChild(div)
+        })
 
     }
 }
