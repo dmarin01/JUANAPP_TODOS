@@ -59,6 +59,5 @@ export default class ListadeTareas {
             div.parentNode.removeChild(div);
             listaDeElementos.splice(event.target, 1);
         })
-
     }
 }
