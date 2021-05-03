@@ -1,4 +1,4 @@
-class ListadeTareas {
+export default class ListadeTareas {
 
     constructor(pTitulo, pPrioridad) {
         this.titulo = pTitulo;
@@ -24,10 +24,6 @@ class ListadeTareas {
         let btnRemove = document.createElement('button');
         div.classList.add(this.prioridad);
 
-        let contador = div.dataset.id;
-        div.dataset.id = 0;
-
-
 
         let parrfText = document.createTextNode(this.titulo);
         parrf.appendChild(parrfText);
@@ -41,17 +37,17 @@ class ListadeTareas {
             case '1':
                 div.style.backgroundColor = '#FF6961'
                 div.className = this.prioridad + ' d-flex justify-content-between';
-                contador += 1;
+
                 break;
             case '2':
                 div.style.backgroundColor = '#CFADC7'
                 div.className = this.prioridad + ' d-flex justify-content-between';
-                contador += 1
+
                 break;
             case '3':
                 div.style.backgroundColor = '#5d9b9b'
                 div.className = this.prioridad + ' d-flex justify-content-between';
-                contador += 1
+
                 break;
         }
 

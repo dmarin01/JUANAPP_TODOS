@@ -1,3 +1,5 @@
+import ListadeTareas from './datos.js';
+
 const listaDeElementos = new Array();
 
 
@@ -29,6 +31,7 @@ function addTareas(event) {
 
 function pintarAllTareas(pLista) {
     divPintar.innerHTML = "";
+
     pLista.forEach(tarea => tarea.pintarTarea(divPintar))
 }
 
@@ -38,7 +41,7 @@ function pintarAllTareas(pLista) {
 function listaFiltradaPrioridades(pPrioridad) {
 
 
-    const listaDePrioridades = listaDeElementos.filter(prioridadBuscada => prioridadBuscada.prioridad === pPrioridad)
+    const listaDePrioridades = listaDeElementos.filter(prioridadBuscada => prioridadBuscada.prioridad === pPrioridad);
 
     return listaDePrioridades;
 }
@@ -55,14 +58,14 @@ function seleccionTarea(event) {
 
     switch (seleccionPrioridad) {
         case '1':
-            divPintar.innerHTML = pintarAllTareas.seleccionPrioridad
+            listaFiltradaPrioridades(seleccionPrioridad);
 
             break;
         case '2':
-            console.log('hola que');
+            listaFiltradaPrioridades(seleccionPrioridad);
             break;
         case '3':
-            console.log('hola tal');
+            listaFiltradaPrioridades(seleccionPrioridad);
             break;
     }
 
