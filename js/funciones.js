@@ -36,7 +36,6 @@ function pintarAllTareas(pLista) {
 }
 
 
-
 //FILTRAR POR PRIORIDAD
 function listaFiltradaPrioridades(pPrioridad) {
 
@@ -46,41 +45,20 @@ function listaFiltradaPrioridades(pPrioridad) {
     return listaDePrioridades;
 }
 
-
 function seleccionTarea(event) {
     event.preventDefault();
 
     let seleccionPrioridad = event.target.value;
 
+    if (seleccionPrioridad != "") {
+        const filtradoPrioridad = listaFiltradaPrioridades(seleccionPrioridad);
 
-    console.log(seleccionPrioridad);
-
-
-    switch (seleccionPrioridad) {
-        case '1':
-            listaFiltradaPrioridades(seleccionPrioridad);
-
-            break;
-        case '2':
-            listaFiltradaPrioridades(seleccionPrioridad);
-            break;
-        case '3':
-            listaFiltradaPrioridades(seleccionPrioridad);
-            break;
+        pintarAllTareas(filtradoPrioridad);
+    } else {
+        pintarAllTareas(listaDeElementos);
     }
 
-
-    /*   if (seleccionPrioridad != "") {
-          const filtradoPrioridad = listaFiltradaPrioridades.seleccionPrioridad;
-  
-          pintarAllTareas(filtradoPrioridad);
-      } else {
-          pintarAllTareas(listaDeElementos.seleccionPrioridad);
-      } */
-
-    return seleccionPrioridad
-
-
+    return seleccionPrioridad;
 }
 
 
@@ -102,3 +80,5 @@ function recogerTextoBusqueda(event) {
         pintarAllTareas(listaDeElementos);
     }
 }
+
+
