@@ -1,4 +1,4 @@
-import ListadeTareas from './datos.js';
+
 
 const listaDeElementos = new Array();
 

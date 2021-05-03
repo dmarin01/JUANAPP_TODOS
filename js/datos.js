@@ -1,4 +1,4 @@
-export default class ListadeTareas {
+class ListadeTareas {
 
     constructor(pTitulo, pPrioridad) {
         this.titulo = pTitulo;
