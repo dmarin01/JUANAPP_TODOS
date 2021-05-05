@@ -1,5 +1,3 @@
-
-
 const listaDeElementos = new Array();
 
 
@@ -21,17 +19,17 @@ inputTextBusqueda.addEventListener('input', recogerTextoBusqueda);
 //AÑADIR TAREA A LA APLICACION WEB
 function addTareas(event) {
     event.preventDefault();
-
+    if (inputTextLista.value === "" || prioridadTarea.value === '0') {
+        alert('Todos los campos son obligatorios')
+        return
+    }
     const tareasList = new ListadeTareas(inputTextLista.value, prioridadTarea.value);
-
     listaDeElementos.push(tareasList);
     pintarAllTareas(listaDeElementos);
-
 }
 
 function pintarAllTareas(pLista) {
     divPintar.innerHTML = "";
-
     pLista.forEach(tarea => tarea.pintarTarea(divPintar))
 }
 
@@ -39,9 +37,7 @@ function pintarAllTareas(pLista) {
 //FILTRAR POR PRIORIDAD
 function listaFiltradaPrioridades(pPrioridad) {
 
-
     const listaDePrioridades = listaDeElementos.filter(prioridadBuscada => prioridadBuscada.prioridad === pPrioridad);
-
     return listaDePrioridades;
 }
 
@@ -57,7 +53,6 @@ function seleccionTarea(event) {
     } else {
         pintarAllTareas(listaDeElementos);
     }
-
     return seleccionPrioridad;
 }
 
